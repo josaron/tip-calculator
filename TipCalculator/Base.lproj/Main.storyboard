@@ -43,7 +43,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCv-rP-r9M">
                                 <rect key="frame" x="264" y="159" width="73" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="xtk-i2-zpZ"/>
+                                    <constraint firstAttribute="width" constant="73" id="ein-ff-tFX"/>
                                 </constraints>
                                 <state key="normal" title="Calculate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -52,34 +52,34 @@
                                     <action selector="calculateTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LTk-gm-zpW"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkz-db-q0Y">
-                                <rect key="frame" x="16" y="400" width="568" height="400"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fFV-8A-vEr">
+                                <rect key="frame" x="0.0" y="192" width="600" height="408"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="Azp-SS-8w3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="tIo-7R-oM9"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="tUp-4I-ckw"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Qkz-db-q0Y" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="2h8-h6-04b"/>
-                            <constraint firstItem="Qkz-db-q0Y" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="400" id="5Wt-0J-6QP"/>
-                            <constraint firstItem="p6p-Ec-LhL" firstAttribute="top" secondItem="xfH-wl-OWu" secondAttribute="bottom" constant="18" id="5nS-vj-xT2"/>
-                            <constraint firstItem="xfH-wl-OWu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="9LC-bQ-YSK"/>
-                            <constraint firstItem="p6p-Ec-LhL" firstAttribute="leading" secondItem="xfH-wl-OWu" secondAttribute="leading" id="JTC-Ym-RNv"/>
-                            <constraint firstItem="Qkz-db-q0Y" firstAttribute="trailing" secondItem="X2c-xD-CpM" secondAttribute="trailing" id="SeX-r6-okw"/>
-                            <constraint firstItem="xfH-wl-OWu" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="17" id="T4E-uh-DEP"/>
-                            <constraint firstItem="X2c-xD-CpM" firstAttribute="leading" secondItem="trJ-va-o9L" secondAttribute="leading" id="Y1l-pJ-Plb"/>
-                            <constraint firstItem="X2c-xD-CpM" firstAttribute="top" secondItem="trJ-va-o9L" secondAttribute="bottom" constant="9" id="Zfc-x9-Msk"/>
-                            <constraint firstItem="trJ-va-o9L" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="13" id="b1x-V7-Vvt"/>
-                            <constraint firstItem="cCv-rP-r9M" firstAttribute="top" secondItem="X2c-xD-CpM" secondAttribute="bottom" constant="13" id="eUF-su-NZU"/>
-                            <constraint firstItem="X2c-xD-CpM" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="kEg-UW-YQ1"/>
-                            <constraint firstItem="cCv-rP-r9M" firstAttribute="centerX" secondItem="Qkz-db-q0Y" secondAttribute="centerX" id="mpH-SG-mEn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="trJ-va-o9L" secondAttribute="trailing" constant="-5" id="tij-ag-NBY"/>
-                            <constraint firstItem="X2c-xD-CpM" firstAttribute="leading" secondItem="p6p-Ec-LhL" secondAttribute="trailing" constant="16" id="w3t-vS-yOY"/>
+                            <constraint firstItem="xfH-wl-OWu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="6pH-Ue-HCq"/>
+                            <constraint firstItem="X2c-xD-CpM" firstAttribute="top" secondItem="trJ-va-o9L" secondAttribute="bottom" constant="9" id="FaA-T6-BOj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="trJ-va-o9L" secondAttribute="trailing" constant="-5" id="HXt-zx-5br"/>
+                            <constraint firstItem="X2c-xD-CpM" firstAttribute="leading" secondItem="trJ-va-o9L" secondAttribute="leading" id="HqX-Il-i0T"/>
+                            <constraint firstItem="fFV-8A-vEr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="N7w-lf-eP5"/>
+                            <constraint firstItem="fFV-8A-vEr" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="NdL-Ka-Mdu"/>
+                            <constraint firstItem="X2c-xD-CpM" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Rxl-ec-mwM"/>
+                            <constraint firstItem="fFV-8A-vEr" firstAttribute="centerX" secondItem="cCv-rP-r9M" secondAttribute="centerX" id="UG6-nq-egM"/>
+                            <constraint firstItem="cCv-rP-r9M" firstAttribute="top" secondItem="X2c-xD-CpM" secondAttribute="bottom" constant="13" id="Wt8-OA-rjy"/>
+                            <constraint firstItem="trJ-va-o9L" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="13" id="YKZ-iN-qlm"/>
+                            <constraint firstAttribute="trailing" secondItem="fFV-8A-vEr" secondAttribute="trailing" id="ffR-Kx-OyG"/>
+                            <constraint firstItem="p6p-Ec-LhL" firstAttribute="top" secondItem="xfH-wl-OWu" secondAttribute="bottom" constant="18" id="hnH-ST-ypW"/>
+                            <constraint firstItem="X2c-xD-CpM" firstAttribute="leading" secondItem="p6p-Ec-LhL" secondAttribute="trailing" constant="16" id="iFJ-Fb-XBU"/>
+                            <constraint firstItem="xfH-wl-OWu" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="17" id="mDw-4U-54D"/>
+                            <constraint firstItem="xfH-wl-OWu" firstAttribute="leading" secondItem="p6p-Ec-LhL" secondAttribute="leading" id="vqK-Df-OJ3"/>
+                            <constraint firstItem="fFV-8A-vEr" firstAttribute="top" secondItem="cCv-rP-r9M" secondAttribute="bottom" constant="3" id="z27-83-VDF"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="plz-oR-5aN" appends="YES" id="i5T-0W-Olv"/>
@@ -88,7 +88,7 @@
                     <navigationItem key="navigationItem" title="Tip Calculator" id="KNX-i7-Dvb" userLabel="Tip Calculator"/>
                     <connections>
                         <outlet property="chargeTextField" destination="trJ-va-o9L" id="xSc-eh-cjw"/>
-                        <outlet property="resultsTextView" destination="Qkz-db-q0Y" id="qzg-GV-Kc6"/>
+                        <outlet property="tableView" destination="fFV-8A-vEr" id="RJQ-sU-Cv2"/>
                         <outlet property="taxPctLabel" destination="p6p-Ec-LhL" id="qS1-Jx-vjw"/>
                         <outlet property="taxPctSlider" destination="X2c-xD-CpM" id="fpQ-L3-eEc"/>
                     </connections>
