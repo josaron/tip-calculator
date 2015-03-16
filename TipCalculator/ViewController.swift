@@ -16,8 +16,6 @@ class ViewController: UIKit.UIViewController, UITableViewDataSource {
     @IBOutlet var chargeTextField : UITextField!
     @IBOutlet var taxPctSlider : UISlider!
     @IBOutlet var taxPctLabel : UILabel!
-    //@IBOutlet var resultsTextView : UITextView!
-    //@IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableView: UITableView!
     
     let tipCalc = TipCalculatorModel(charge: 33.25, taxPct: 0.06)
